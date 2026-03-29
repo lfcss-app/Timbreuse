@@ -868,7 +868,51 @@ function dl(blob,name){const u=URL.createObjectURL(blob),a=document.createElemen
 function expCsv(){const rows=[["Date","Debut_ct","Fim_ct","Trabalhado_ct","Balance_ct","Pause_h","Vac_h","HS_h","Jantar","Local","Nota"],...[...entries].sort((a,b)=>a.date.localeCompare(b.date)).map(e=>{const{worked,balance}=calcDay(e);return[e.date,e.start?t2ct(e.start):"",e.end?t2ct(e.end):"",ct(worked),ctS(balance),e.lunch||"1",e.vacation||"0",e.extraUsed||"0",e.dinner?"1":"0",e.site||"",e.note||""];})];dl(new Blob([rows.map(r=>r.map(esc).join(";")).join("\n")],{type:"text/csv;charset=utf-8"}),`timbreuse_${nowK()}.csv`);}
 function expJson(){dl(new Blob([JSON.stringify({entries:entries.map(({photoThumb,...e})=>e),cfg},null,2)],{type:"application/json"}),`timbreuse_${nowK()}.json`);}
 function parseCsvL(l,sep=";"){const o=[];let c="",q=false;for(let i=0;i<l.length;i++){const ch=l[i];if(ch==='"'){if(q&&l[i+1]==='"'){c+='"';i++;}else q=!q;}else if(ch===sep&&!q){o.push(c);c="";}else c+=ch;}o.push(c);return o.map(s=>s.trim());}
-function impCsv(text){const lines=text.replace(/\r\n/g,"\n").replace(/\r/g,"\n").split("\n").filter(l=>l.trim());if(lines.length<2){toast("CSV vazio","err");return;}const h=parseCsvL(lines[0]).map(x=>x.toLowerCase()),idx=n=>h.indexOf(n.toLowerCase());const iD=idx("date");if(iD===-1){toast("Coluna Date não encontrada","err");return;}const iS=idx("debut"),iE=idx("fim_ct")||idx("fim"),iL=idx("pause_h"),iV=idx("vac_h"),iDn=idx("jantar"),iHs=idx("hs_h"),iSt=idx("local"),iN=idx("nota");const imp=[];for(let i=1;i<lines.length;i++){const c=parseCsvL(lines[i]);const d=c[iD]||"";if(!/^\d{4}-\d{2}-\d{2}$/.test(d))continue;imp.push({...emptyE(d),date:d,start:iS!==-1?c[iS]||"":"",end:iE!==-1?c[iE]||"":"",lunch:String(iL!==-1?parseFloat(c[iL])||1:1),vacation:String(iV!==-1?parseFloat(c[iV])||0:0),dinner:iDn!==-1?c[iDn].trim()==="1":false,extraUsed:String(iHs!==-1?parseFloat(c[iHs])||0:0),site:iSt!==-1?c[iSt]||"":"",note:iN!==-1?c[iN]||"":""});}const map=new Map(entries.map(e=>[e.date,e]));for(const e of imp)map.set(e.date,e);entries=Array.from(map.values());saveAndSync();toast(`${imp.length} dias importados ✅`,"ok");}
+function impCsv(text){
+  const lines=text.replace(/\r\n/g,"\n").replace(/\r/g,"\n").split("\n").filter(l=>l.trim());
+  if(lines.length<2){toast("CSV vazio","err");return;}
+  const h=parseCsvL(lines[0]).map(x=>x.toLowerCase());
+  const idx=(...ns)=>{for(const n of ns){const i=h.indexOf(n.toLowerCase());if(i!==-1)return i;}return -1;};
+  const iD=idx("date");
+  if(iD===-1){toast("Coluna Date nao encontrada","err");return;}
+  const iS =idx("debut","debut_ct","start");
+  const iE =idx("fin","fim","fim_ct","end");
+  const iL =idx("pause_midi_h","pause_h","lunch");
+  const iV =idx("vacances_h","vac_h","vacation");
+  const iDn=idx("diner","jantar","dinner");
+  const iHs=idx("hs_moins_h","hs_h","hs_utilisees_h","extraused");
+  const iSt=idx("site","local","chantier");
+  const iN =idx("note","nota","remarque");
+  const byDate={};
+  for(let i=1;i<lines.length;i++){
+    const c=parseCsvL(lines[i]);
+    const d=c[iD]||"";
+    if(!/^\d{4}-\d{2}-\d{2}$/.test(d))continue;
+    const start =iS!==-1?c[iS]||"":"";
+    const end   =iE!==-1?c[iE]||"":"";
+    const lunch =parseFloat(iL!==-1?c[iL]:"1")||1;
+    const vac   =parseFloat(iV!==-1?c[iV]:"0")||0;
+    const hs    =parseFloat(iHs!==-1?c[iHs]:"0")||0;
+    const dinner=iDn!==-1?(c[iDn].trim()==="1"||c[iDn].trim()==="true"):false;
+    const site  =iSt!==-1?c[iSt]||"":"";
+    const note  =iN!==-1?c[iN]||"":"";
+    if(!byDate[d]){byDate[d]={date:d,start,end,lunch:String(lunch),vacation:"0",extraUsed:"0",dinner,site,note,punches:[]};}
+    const ex=byDate[d];
+    if(start&&(!ex.start||toM(start)<toM(ex.start)))ex.start=start;
+    if(end&&(!ex.end||toM(end)>toM(ex.end)))ex.end=end;
+    ex.vacation=String((parseFloat(ex.vacation)||0)+vac);
+    ex.extraUsed=String((parseFloat(ex.extraUsed)||0)+hs);
+    if(dinner)ex.dinner=true;
+    if(!ex.site&&site)ex.site=site;
+    if(!ex.note&&note)ex.note=note;
+  }
+  const imp=Object.values(byDate).map(e=>({...emptyE(e.date),...e}));
+  const map=new Map(entries.map(e=>[e.date,e]));
+  for(const e of imp)map.set(e.date,e);
+  entries=Array.from(map.values()).sort((a,b)=>a.date.localeCompare(b.date));
+  saveAndSync();
+  toast(`${imp.length} dias importados (${lines.length-1} linhas lidas)`,`ok`);
+}
 function impJson(text){try{const d=JSON.parse(text);if(d.entries&&Array.isArray(d.entries)){entries=d.entries.map(e=>({...emptyE(e.date||nowK()),...e,punches:Array.isArray(e.punches)?e.punches:[]}));if(d.cfg)Object.assign(cfg,d.cfg);saveAndSync();applySettings();toast("JSON importado ✅","ok");}else toast("JSON inválido","err");}catch(x){toast("Erro: "+x.message,"err");}}
 
 /* ════ TABS ════ */
