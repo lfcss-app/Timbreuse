@@ -1,0 +1,17 @@
+{
+  "name": "Timbreuse",
+  "short_name": "Timbreuse",
+  "description": "Pointage horaire en centièmes — sync Google Sheets",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#070b14",
+  "theme_color": "#070b14",
+  "orientation": "portrait-primary",
+  "lang": "fr",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ],
+  "categories": ["productivity", "utilities"]
+}
