@@ -29,11 +29,9 @@
     body{font-family:'Outfit',system-ui,sans-serif;background:var(--bg);color:var(--t);min-height:100dvh;display:flex;flex-direction:column;max-width:560px;margin:0 auto}
     @media(min-width:560px){body{border-left:1px solid var(--bd);border-right:1px solid var(--bd)}}
 
-    /* ── Header ── */
     .hdr{display:flex;justify-content:space-between;align-items:center;padding:11px 14px 11px 18px;border-bottom:1px solid var(--bd);position:sticky;top:0;background:var(--bg);z-index:100;gap:8px}
     .hdr-t{font-size:.88rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--a);flex-shrink:0}
     .hdr-clk{font-family:'Space Mono',monospace;font-size:.9rem;color:var(--t2);flex-shrink:0}
-    /* Sync pill */
     .sp{display:flex;align-items:center;gap:5px;padding:4px 9px;border-radius:999px;font-size:.62rem;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:all .15s;border:1px solid}
     .sp-ok{background:var(--gd);border-color:rgba(16,185,129,.3);color:var(--g)}
     .sp-ko{background:var(--rd);border-color:rgba(244,63,94,.3);color:var(--r)}
@@ -41,7 +39,6 @@
     .sp-busy{background:var(--ad);border-color:var(--ab);color:var(--a)}
     .sp-dot{width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0}
 
-    /* ── Layout ── */
     .content{flex:1;overflow-y:auto;padding-bottom:76px}
     .tab{display:none}.tab.active{display:block}
     .bnav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:560px;background:var(--sf);border-top:1px solid var(--bd);display:flex;z-index:200}
@@ -49,7 +46,6 @@
     .nb svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
     .nb.active{color:var(--a)}
 
-    /* ── Hero ── */
     .hero{padding:18px 20px 10px;text-align:center}
     .hlbl{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--t3);margin-bottom:6px}
     .sbadge{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;border-radius:999px;font-weight:700;font-size:.9rem;border:1px solid}
@@ -57,12 +53,10 @@
     .s-out{background:var(--rd);color:var(--r);border-color:rgba(244,63,94,.3)}
     .s-pause{background:var(--pud);color:var(--pu);border-color:rgba(167,139,250,.3)}
 
-    /* ── Timer ── */
     .twrap{text-align:center;padding:4px 20px 10px}
     .tval{font-family:'Space Mono',monospace;font-size:clamp(2.8rem,12vw,3.6rem);font-weight:700;letter-spacing:-.02em;line-height:1}
     .tunit{font-size:.68rem;color:var(--t3);margin-top:3px;letter-spacing:.08em;text-transform:uppercase}
 
-    /* ── Punch buttons ── */
     .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 16px 14px}
     .pb{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:18px 8px;border:none;border-radius:var(--rr);cursor:pointer;transition:transform .1s,filter .1s;font-family:'Outfit',sans-serif;font-weight:700;font-size:.9rem}
     .pb:active{transform:scale(.95)}
@@ -72,20 +66,17 @@
     .pb-pause{background:var(--pu);color:#fff}.pb-pause:hover{filter:brightness(1.1)}
     .pb-res{background:var(--sf2);color:var(--t);border:1px solid var(--bd2)}
 
-    /* ── KPI ── */
     .krow{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:0 16px}
     .kpi{background:var(--sf);border:1px solid var(--bd);border-radius:var(--rs);padding:10px 6px 12px;text-align:center}
     .klbl{font-size:.55rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--t3);margin-bottom:5px}
     .kval{font-family:'Space Mono',monospace;font-size:.85rem;font-weight:700}
     .pos{color:var(--g)}.neg{color:var(--r)}.acc{color:var(--a)}
 
-    /* ── Progress ── */
     .prwrap{padding:12px 16px 0}
     .prhdr{display:flex;justify-content:space-between;margin-bottom:5px}
     .prlbl{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--t3)}
     .prval{font-family:'Space Mono',monospace;font-size:.72rem;color:var(--t2)}
 
-    /* ── Week ── */
     .week{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;padding:12px 16px 0}
     .wd{display:flex;flex-direction:column;align-items:center;gap:3px}
     .wdl{font-size:.55rem;font-weight:700;text-transform:uppercase;color:var(--t3)}
@@ -94,7 +85,6 @@
     .wdh{font-family:'Space Mono',monospace;font-size:.5rem;color:var(--t3)}
     .wd.tod .wdl{color:var(--a)}.wd.tod .wdbw{border-color:var(--ab)}
 
-    /* ── Cards ── */
     .sec{padding:12px 16px 0}
     .card{background:var(--sf);border:1px solid var(--bd);border-radius:var(--rr);padding:14px}
     .card+.card{margin-top:10px}
@@ -107,7 +97,6 @@
     .fline{display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--t2);margin-top:8px}
     input[type="checkbox"]{width:15px;height:15px;accent-color:var(--a);flex-shrink:0}
 
-    /* ── Punch log ── */
     .plog{display:grid;gap:5px;margin-top:10px}
     .pli{display:flex;align-items:center;gap:8px;background:var(--bg);border:1px solid var(--bd);border-radius:7px;padding:7px 10px}
     .pld{width:7px;height:7px;border-radius:50%;flex-shrink:0}
@@ -118,7 +107,6 @@
     .pldel{background:none;border:none;cursor:pointer;color:var(--t3);padding:2px 5px;border-radius:4px;font-size:.75rem}
     .pldel:hover{color:var(--r);background:var(--rd)}
 
-    /* ── Buttons ── */
     .btn{padding:9px 16px;border:none;border-radius:999px;font-family:'Outfit',sans-serif;font-weight:700;font-size:.82rem;cursor:pointer;transition:opacity .15s,transform .1s}
     .btn:active{transform:scale(.97)}
     .btn-a{background:var(--a);color:#000}.btn-a:hover{opacity:.88}
@@ -128,20 +116,17 @@
     .btn-sm{padding:7px 14px;font-size:.78rem}
     .brow{display:flex;flex-wrap:wrap;gap:7px}
 
-    /* ── Chips ── */
     .chips{display:flex;gap:6px;overflow-x:auto;padding:14px 16px 0;scrollbar-width:none}
     .chips::-webkit-scrollbar{display:none}
     .chip{flex-shrink:0;padding:5px 12px;border-radius:999px;font-size:.7rem;font-weight:700;background:var(--sf);border:1px solid var(--bd);color:var(--t2);cursor:pointer;white-space:nowrap;transition:all .15s}
     .chip.on{background:var(--ad);border-color:var(--ab);color:var(--a)}
 
-    /* ── Summary ── */
     .sum{display:grid;gap:7px}
     .sln{display:flex;justify-content:space-between;align-items:center;font-size:.84rem}
     .sln .l{color:var(--t2)}.sln .v{font-family:'Space Mono',monospace;font-weight:700}
     .sdiv{height:1px;background:var(--bd);margin:2px 0}
     .bnumbig{font-family:'Space Mono',monospace;font-size:2.6rem;font-weight:700;line-height:1;text-align:center}
 
-    /* ── Table ── */
     .mtbl{width:100%;border-collapse:collapse;font-size:.75rem}
     .mtbl th{padding:7px 5px;text-align:right;font-size:.58rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--t3);border-bottom:1px solid var(--bd)}
     .mtbl th:first-child{text-align:left}
@@ -150,7 +135,6 @@
     .mtbl tr.wknd td{opacity:.4}.mtbl tr.hday td{color:var(--r)}.mtbl tr.tod td{background:var(--ad)}
     .mtbl tr:hover td{background:rgba(255,255,255,.03);cursor:pointer}
 
-    /* ── Chart ── */
     .ctabs{display:flex;gap:6px;margin-bottom:10px}
     .ctab{padding:4px 12px;border-radius:999px;font-size:.7rem;font-weight:700;border:1px solid var(--bd);background:none;color:var(--t3);cursor:pointer}
     .ctab.on{background:var(--ad);border-color:var(--ab);color:var(--a)}
@@ -158,21 +142,27 @@
     .cli{display:flex;align-items:center;gap:5px;font-size:.68rem;color:var(--t2)}
     .cld{width:9px;height:9px;border-radius:2px;flex-shrink:0}
 
-    /* ── Photo/OCR ── */
     .photoprev{width:100%;max-height:200px;object-fit:contain;border-radius:var(--rs);border:1px solid var(--bd);display:none;margin-top:8px;background:#000}
     .ocrbox{margin-top:8px;padding:9px 10px;background:var(--bg);border:1px solid var(--bd);border-radius:var(--rs);font-size:.75rem;color:var(--t2);display:none}
     .ocrc{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}
     .occhip{padding:4px 10px;border-radius:999px;background:rgba(96,165,250,.12);border:1px solid rgba(96,165,250,.4);color:var(--bl);font-family:'Space Mono',monospace;font-size:.75rem;cursor:pointer}
     .occhip:hover{background:rgba(96,165,250,.25)}
 
-    /* ── GAS Setup box ── */
     .gas-box{background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.25);border-radius:var(--rs);padding:12px 14px;font-size:.8rem;line-height:1.7;color:var(--t2)}
     .gas-url{font-family:'Space Mono',monospace;font-size:.7rem;word-break:break-all;color:var(--a);background:var(--ad);border:1px solid var(--ab);border-radius:6px;padding:7px 10px;display:block;margin-top:6px;cursor:pointer;user-select:all}
     .steps-list{padding-left:4px;margin-top:8px}
     .steps-list li{margin-bottom:5px;list-style:none;padding-left:0}
     .step-n{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--ad);color:var(--a);font-size:.65rem;font-weight:700;margin-right:6px;flex-shrink:0}
 
-    /* ── Modal ── */
+    /* Yearly ledger */
+    .ylg-row{display:grid;grid-template-columns:1fr auto auto auto;gap:8px;align-items:center;padding:8px 10px;background:var(--bg);border:1px solid var(--bd);border-radius:var(--rs);margin-top:6px;font-size:.78rem}
+    .ylg-row .adj-note{color:var(--t2);font-family:'Outfit',sans-serif}
+    .ylg-row .adj-date{font-family:'Space Mono',monospace;color:var(--t3);font-size:.7rem}
+    .ylg-row .adj-h{font-family:'Space Mono',monospace;font-weight:700}
+    .ylg-del{background:none;border:none;cursor:pointer;color:var(--t3);padding:2px 6px;border-radius:4px;font-size:.85rem}
+    .ylg-del:hover{color:var(--r);background:var(--rd)}
+    .ylg-total{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:var(--ad);border:1px solid var(--ab);border-radius:var(--rs);margin-top:10px;font-weight:700}
+
     .overlay{position:fixed;inset:0;background:rgba(7,11,20,.82);z-index:500;display:flex;align-items:flex-end;justify-content:center;opacity:0;pointer-events:none;transition:opacity .2s}
     .overlay.open{opacity:1;pointer-events:all}
     .smodal{width:100%;max-width:560px;background:var(--sf);border-top:1px solid var(--bd);border-radius:20px 20px 0 0;padding:0 0 env(safe-area-inset-bottom,16px);transform:translateY(100%);transition:transform .28s cubic-bezier(.32,.72,0,1);max-height:92dvh;overflow-y:auto}
@@ -187,12 +177,10 @@
     .sr2.full{grid-template-columns:1fr}
     .delbtn{width:100%;padding:10px;background:var(--rd);color:var(--r);border:1px solid rgba(244,63,94,.3);border-radius:var(--rs);font-family:'Outfit',sans-serif;font-weight:700;font-size:.82rem;cursor:pointer}
 
-    /* ── FAB ── */
     .fab{position:fixed;bottom:82px;right:calc(50% - 268px);width:48px;height:48px;border-radius:50%;background:var(--a);color:#000;border:none;cursor:pointer;font-size:1.4rem;font-weight:700;box-shadow:0 4px 20px rgba(245,158,11,.4);display:none;align-items:center;justify-content:center;z-index:300;transition:transform .15s}
     .fab:hover{transform:scale(1.08)}.fab:active{transform:scale(.94)}
     @media(max-width:560px){.fab{right:16px}}
 
-    /* ── Toast ── */
     .tc{position:fixed;top:62px;left:50%;transform:translateX(-50%);z-index:999;display:flex;flex-direction:column;gap:5px;pointer-events:none;width:calc(100% - 32px);max-width:360px}
     .toast{background:var(--sf2);border:1px solid var(--bd2);border-radius:9px;padding:9px 14px;font-size:.82rem;font-weight:600;animation:tIn .2s ease,tOut .2s ease 2.3s forwards;box-shadow:0 4px 20px rgba(0,0,0,.4)}
     .toast.ok{border-color:rgba(16,185,129,.5);color:var(--g)}
@@ -211,7 +199,7 @@
 <body>
 
 <header class="hdr">
-  <div class="hdr-t">Timbreuse <span class="ctpill">ct</span></div>
+  <div class="hdr-t">Timbreuse <span class="ctpill">v14</span></div>
   <div id="sp" class="sp sp-idle" onclick="manualSync()" title="Sincronizar">
     <span class="sp-dot"></span><span id="spTxt">Offline</span>
   </div>
@@ -284,7 +272,6 @@
       <div id="plog" class="plog"></div>
     </div>
 
-    <!-- OCR Photo -->
     <div class="card mt8">
       <div class="cttl">📷 Foto carta + OCR</div>
       <div class="brow">
@@ -300,10 +287,10 @@
         <div id="ocrMsg" style="color:var(--t3)">—</div>
         <div class="ocrc" id="ocrChips"></div>
       </div>
-      <p class="muted mt6">1.º toque = Início · 2.º toque = Fim · 6h15 → 6.25 ct</p>
+      <p class="muted mt6">1.º toque = Início · 2.º toque = Fim · 6h15 → 6.25 ct · horas arredondadas a 15 min</p>
     </div>
   </div>
-</div><!-- /today -->
+</div>
 
 <!-- ══ HISTORIQUE ══ -->
 <div id="tab-history" class="tab">
@@ -321,13 +308,45 @@
       <div class="cleg" id="cleg"></div>
     </div>
     <div class="card mt10"><div class="cttl">Résumé</div><div class="sum" id="sumB"></div></div>
+
+    <!-- YEARLY BALANCE -->
+    <div class="card mt10">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <div class="cttl" style="margin-bottom:0">Saldo anual <span id="ylgYear" style="color:var(--a)">—</span></div>
+        <select id="ylgYrSel" class="fi" style="width:auto;padding:4px 8px;font-size:.75rem"></select>
+      </div>
+
+      <div class="sum">
+        <div class="sln"><span class="l">Saldo inicial (transitado)</span>
+          <span class="v"><input type="number" id="ylgInit" step="0.25" style="width:80px;text-align:right;background:var(--bg);border:1px solid var(--bd2);border-radius:4px;padding:3px 6px;color:var(--t);font-family:'Space Mono',monospace;font-weight:700"> h</span>
+        </div>
+        <div class="sln"><span class="l">Balance trabalho do ano</span><span class="v" id="ylgWork">—</span></div>
+        <div class="sln"><span class="l">Ajustes manuais</span><span class="v" id="ylgAdjSum">0.00 h</span></div>
+      </div>
+
+      <div class="ylg-total">
+        <span>Saldo anual total</span>
+        <span id="ylgTotal" class="v" style="font-family:'Space Mono',monospace;font-size:1.05rem">—</span>
+      </div>
+
+      <div class="cttl mt10" style="margin-bottom:6px">Ajustes</div>
+      <div id="ylgAdjList"></div>
+
+      <div class="brow mt10">
+        <button class="btn btn-g btn-sm" id="bAdjAdd">+ Novo ajuste</button>
+        <button class="btn btn-a btn-sm" id="bLedgerSave">💾 Guardar saldo anual ↗</button>
+      </div>
+      <p class="muted mt6">Ex.: ajuste -4h = subtraí 4h (dia pago não trabalhado, etc.)</p>
+    </div>
+
     <div class="card mt10">
       <div class="cttl">Solde HS global</div>
       <div style="text-align:center;padding:6px 0">
         <div class="bnumbig" id="balN">—</div>
-        <div style="font-size:.7rem;color:var(--t3);margin-top:4px">Todas as entradas</div>
+        <div style="font-size:.7rem;color:var(--t3);margin-top:4px">Todas as entradas (sem ajustes)</div>
       </div>
     </div>
+
     <div class="card mt10" style="overflow-x:auto;padding:14px 10px">
       <div class="cttl" style="padding:0 4px;margin-bottom:8px">Detalhe — toca para editar</div>
       <table class="mtbl">
@@ -336,13 +355,12 @@
       </table>
     </div>
   </div>
-</div><!-- /history -->
+</div>
 
 <!-- ══ DEFINIÇÕES ══ -->
 <div id="tab-settings" class="tab">
   <div style="padding:16px">
 
-    <!-- GOOGLE SHEETS — principal -->
     <div class="card" style="border-color:rgba(16,185,129,.4)">
       <div class="cttl" style="color:var(--g)">☁️ Google Sheets — sincronização</div>
 
@@ -351,10 +369,10 @@
           <strong style="color:var(--g)">Configurar em 4 passos:</strong>
           <ul class="steps-list">
             <li><span class="step-n">1</span>Abre o teu <strong>Google Sheets</strong> → <em>Extensões → Apps Script</em></li>
-            <li><span class="step-n">2</span>Apaga o código e cola o conteúdo do ficheiro <strong>Code.gs</strong> (incluído no zip)</li>
+            <li><span class="step-n">2</span>Apaga o código e cola o conteúdo do ficheiro <strong>Code.gs v2</strong></li>
             <li><span class="step-n">3</span><em>Implementar → Nova implementação → Aplicação Web</em><br>
               &nbsp;&nbsp;Executar como: <strong>Eu</strong> · Quem tem acesso: <strong>Qualquer pessoa</strong></li>
-            <li><span class="step-n">4</span>Copia o URL e cola abaixo ↓</li>
+            <li><span class="step-n">4</span>Copia o URL /exec e cola abaixo ↓</li>
           </ul>
         </div>
         <label class="flbl mt10">URL do Apps Script</label>
@@ -377,7 +395,7 @@
           <button class="btn btn-g btn-sm" id="bGasSync">🔄 Sincronizar agora</button>
           <button class="btn btn-s btn-sm" id="bGasDisc">Desligar</button>
         </div>
-        <p class="muted mt6">Os dados são enviados automaticamente a cada registo.</p>
+        <p class="muted mt6">Dados enviados automaticamente a cada registo. Merge por timestamp → último que gravou ganha.</p>
       </div>
     </div>
 
@@ -424,10 +442,10 @@
       <div class="mt10"><button class="btn btn-d btn-sm" id="bReset">Apagar todos os dados</button></div>
     </div>
 
-    <p class="muted" style="text-align:center;padding:12px 0 4px">Timbreuse v13 PWA · centièmes · GAS sync</p>
+    <p class="muted" style="text-align:center;padding:12px 0 4px">Timbreuse v14 PWA · centièmes · sync bidirecional · saldo anual</p>
   </div>
-</div><!-- /settings -->
-</div><!-- /content -->
+</div>
+</div>
 
 <nav class="bnav">
   <button class="nb active" data-tab="today">
@@ -456,8 +474,8 @@
         <div><label class="flbl">Chantier</label><input type="text" id="me-s" class="fi" placeholder="Local"></div>
       </div>
       <div class="sr2">
-        <div><label class="flbl">Início</label><input type="time" id="me-st" class="fi"></div>
-        <div><label class="flbl">Fim</label><input type="time" id="me-en" class="fi"></div>
+        <div><label class="flbl">Início</label><input type="time" id="me-st" class="fi" step="900"></div>
+        <div><label class="flbl">Fim</label><input type="time" id="me-en" class="fi" step="900"></div>
       </div>
       <div class="sr2">
         <div><label class="flbl">Pause midi</label>
@@ -477,8 +495,33 @@
         <div style="display:flex;justify-content:space-between"><span style="color:var(--t3)">Trabalhado</span><span id="meW" style="font-family:'Space Mono',monospace;font-weight:700">—</span></div>
         <div style="display:flex;justify-content:space-between;margin-top:5px"><span style="color:var(--t3)">Balance</span><span id="meB" style="font-family:'Space Mono',monospace;font-weight:700">—</span></div>
       </div>
+      <div style="background:rgba(96,165,250,.08);border:1px solid rgba(96,165,250,.3);border-radius:var(--rs);padding:8px 10px;font-size:.72rem;color:var(--bl)">
+        ℹ️ Horas arredondadas automaticamente a 15 min (8h23 → 8h15 → 8.25 ct)
+      </div>
       <button class="btn btn-a" id="mSave">💾 Guardar ↗ Sheets</button>
       <button class="delbtn" id="mDel" style="display:none">Eliminar esta entrada</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal ajuste saldo anual -->
+<div class="overlay" id="adjOverlay">
+  <div class="smodal">
+    <div class="sg"></div>
+    <div class="sh">
+      <span class="sh-t">Novo ajuste</span>
+      <button class="sh-x" id="adjClose">✕</button>
+    </div>
+    <div class="sbody">
+      <div class="sr2">
+        <div><label class="flbl">Data</label><input type="date" id="adj-d" class="fi"></div>
+        <div><label class="flbl">Horas (+ ou -)</label><input type="number" id="adj-h" class="fi" step="0.25" value="0"></div>
+      </div>
+      <div class="sr2 full"><label class="flbl">Motivo</label><input type="text" id="adj-n" class="fi" placeholder="Ex. dia pago, correção, ..."></div>
+      <div style="background:rgba(96,165,250,.08);border:1px solid rgba(96,165,250,.3);border-radius:var(--rs);padding:8px 10px;font-size:.72rem;color:var(--bl)">
+        💡 Valor positivo = soma ao saldo. Negativo = subtrai.
+      </div>
+      <button class="btn btn-a" id="adjSave">Adicionar ajuste</button>
     </div>
   </div>
 </div>
@@ -487,68 +530,108 @@
 
 <script>
 /* ════════════════════════════════════════
-   CENTIÈMES: 6h15 → 6.25 | 6h30 → 6.50
+   TIMBREUSE v14
+   Fixes:
+   - Quarter-rounding em TODAS as entradas (incluindo modal manual)
+   - Sync bidireccional com updatedAt por entrada (last-write-wins)
+   - Saldo anual: inicial + ajustes manuais
    ════════════════════════════════════════ */
-const r05 = h => (Math.floor(Math.abs(h)*20)/20);
-const ct  = h => (!isFinite(h)||isNaN(h)) ? "—" : r05(h).toFixed(2);
-const ctS = h => (!isFinite(h)||isNaN(h)) ? "—" : (h<0?"-":"+")+r05(h).toFixed(2);
-const t2ct = t => t ? (r05(toM(t)/60)).toFixed(2) : "—";
 
-/* ════ CHART ════ */
+/* ══ Centièmes & time helpers ══ */
+const ct  = h => (!isFinite(h)||isNaN(h)) ? "—" : Math.abs(h).toFixed(2);
+const ctS = h => (!isFinite(h)||isNaN(h)) ? "—" : (h<0?"-":"+")+Math.abs(h).toFixed(2);
+const t2ct = t => t ? ((toM(t)/60).toFixed(2)) : "—";
+const pad = n => String(n).padStart(2,"0");
+const toM = t => { if(!t) return 0; const[h,m]=t.split(":").map(Number); return h*60+(m||0); };
+const nowT = () => { const d=new Date(); return `${pad(d.getHours())}:${pad(d.getMinutes())}`; };
+
+/* Quarter-round: 8h23 → 8h15, 8h38 → 8h30, etc. */
+function qR(t){
+  if(!t) return "";
+  const m = Math.floor(toM(t)/15)*15;
+  return `${pad(Math.floor(m/60))}:${pad(m%60)}`;
+}
+
+/* ══ Chart type ══ */
 let ctype="h";
 function setCT(t,btn){ctype=t;document.querySelectorAll(".ctab").forEach(b=>b.classList.remove("on"));btn.classList.add("on");renderChart();}
 
-/* ════ KEYS & STATE ════ */
-const SK="tmb_v13e", SKCFG="tmb_v13c";
-const SKO="timbreuse_v12_entries";
+/* ══ Keys & state ══ */
+const SK="tmb_v14e", SKCFG="tmb_v14c", SKLG="tmb_v14l";
+const SKO_E="tmb_v13e", SKO_C="tmb_v13c"; // migrate from v13
 let entries=[], cfg={name:"",target:174,baseOT:21.75,morning:.5,dinner:16,region:"catholic",lockHolidays:false,gasUrl:"",spreadsheetId:""};
-let fmk="all", meDate=null, activeTab="today";
+let ledger={years:{}}; // { "2026":{initial:12.5,adjustments:[{hours,note,date}]}, ... }
+let fmk="all", meDate=null, activeTab="today", curYear=(new Date()).getFullYear();
 let curPhoto=null;
 let gasConnected=false;
+let syncInFlight=false, syncPending=false;
 
-/* ════ UTILS ════ */
+/* ══ DOM ══ */
 const $=id=>document.getElementById(id);
-const pad=n=>String(n).padStart(2,"0");
 function nowK(){const d=new Date();return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;}
 function dtK(dt){return `${dt.getFullYear()}-${pad(dt.getMonth()+1)}-${pad(dt.getDate())}`;}
 function parseDt(s){if(!s)return null;const[y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d);}
-function toM(t){if(!t)return 0;const[h,m]=t.split(":").map(Number);return h*60+(m||0);}
-function qR(t){const m=Math.floor(toM(t)/15)*15;return `${pad(Math.floor(m/60))}:${pad(m%60)}`;}
-function nowT(){const d=new Date();return `${pad(d.getHours())}:${pad(d.getMinutes())}`;}
 function mkM(k){return k?k.slice(0,7):"";}
+function mkY(k){return k?k.slice(0,4):"";}
 function isWE(k){const d=parseDt(k);return d?d.getDay()===0||d.getDay()===6:false;}
 function fmtD(k){const d=parseDt(k);return d?d.toLocaleDateString("fr-CH",{weekday:"short",day:"numeric",month:"short"}):k;}
 function ldScript(src){return new Promise((res,rej)=>{const s=document.createElement("script");s.src=src;s.onload=res;s.onerror=rej;document.head.appendChild(s);});}
 
-/* ════ HOLIDAYS ════ */
+/* ══ Holidays ══ */
 function easter(y){const a=y%19,b=Math.floor(y/100),c=y%100,d=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3),h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),mo=Math.floor((h+l-7*m+114)/31)-1,dy=((h+l-7*m+114)%31)+1;return new Date(y,mo,dy);}
 function addD(dt,n){const x=new Date(dt);x.setDate(x.getDate()+n);return x;}
 const _hc={};
 function getHol(y){const k=`${y}_${cfg.region}`;if(_hc[k])return _hc[k];const s=new Set(),e=easter(y);s.add(`${y}-01-01`);s.add(`${y}-08-01`);s.add(`${y}-12-25`);s.add(dtK(addD(e,-2)));s.add(dtK(addD(e,39)));if(cfg.region==="catholic"){s.add(dtK(addD(e,60)));s.add(`${y}-08-15`);s.add(`${y}-11-01`);s.add(`${y}-12-08`);}else{s.add(`${y}-01-02`);s.add(dtK(addD(e,1)));s.add(dtK(addD(e,50)));s.add(`${y}-12-26`);}return _hc[k]=s;}
 function isHol(k){return getHol(Number(k.slice(0,4))).has(k);}
 
-/* ════ DATA ════ */
-function emptyE(d){return{id:`${d}_${Math.random().toString(16).slice(2,8)}`,date:d,start:"",end:"",lunch:"1",vacation:"0",extraUsed:"0",dinner:false,site:"",note:"",punches:[],photoThumb:null};}
+/* ══ Data model ══ */
+function emptyE(d){
+  return{
+    id:`${d}_${Math.random().toString(16).slice(2,8)}`,
+    date:d,start:"",end:"",lunch:"1",vacation:"0",extraUsed:"0",
+    dinner:false,site:"",note:"",punches:[],
+    updatedAt:Date.now(),
+    photoThumb:null
+  };
+}
+function touchEntry(e){e.updatedAt=Date.now();return e;}
+
 function loadLocal(){
-  const raw=localStorage.getItem(SK)||localStorage.getItem(SKO);
-  if(!raw)return;
-  try{const p=JSON.parse(raw);if(Array.isArray(p))entries=p.map(e=>({...emptyE(e.date||nowK()),...e,punches:Array.isArray(e.punches)?e.punches:[]}));}catch(x){}
+  // v14 first
+  let raw=localStorage.getItem(SK);
+  let fromOld=false;
+  if(!raw){ raw=localStorage.getItem(SKO_E); fromOld=!!raw; }
+  if(!raw) return;
+  try{
+    const p=JSON.parse(raw);
+    if(Array.isArray(p)){
+      entries=p.map(e=>({...emptyE(e.date||nowK()),...e,punches:Array.isArray(e.punches)?e.punches:[],updatedAt:Number(e.updatedAt)||Date.now()-86400000}));
+      if(fromOld) saveLocal(); // persist to v14 key
+    }
+  }catch(x){}
 }
 function loadCfg(){
-  const raw=localStorage.getItem(SKCFG);
-  if(!raw)return;
+  let raw=localStorage.getItem(SKCFG); if(!raw) raw=localStorage.getItem(SKO_C);
+  if(!raw) return;
   try{const p=JSON.parse(raw);if(p.monthlyTarget)p.target=p.monthlyTarget;if(p.expectedMonthlyOT)p.baseOT=p.expectedMonthlyOT;Object.assign(cfg,p);}catch(x){}
+}
+function loadLedger(){
+  const raw=localStorage.getItem(SKLG); if(!raw) return;
+  try{const p=JSON.parse(raw); if(p&&p.years) ledger=p;}catch(x){}
 }
 function saveLocal(){localStorage.setItem(SK,JSON.stringify(entries));}
 function saveCfg(){localStorage.setItem(SKCFG,JSON.stringify(cfg));}
+function saveLedgerLocal(){localStorage.setItem(SKLG,JSON.stringify(ledger));}
+
 function getE(d){return entries.find(e=>e.date===d);}
 function ensE(d){let e=getE(d);if(!e){e=emptyE(d);entries.push(e);}return e;}
 function filt(){return fmk==="all"?entries:entries.filter(e=>mkM(e.date)===fmk);}
 
 /* ════════════════════════════════════════
-   GOOGLE APPS SCRIPT SYNC
-   GET  ?action=read  → {entries, savedAt}
-   POST {action:"write", entries}
+   GOOGLE APPS SCRIPT SYNC (v2)
+   - GET  ?action=read       → {entries, ledger, meta, spreadsheetId, serverTime}
+   - POST {action:"write", entries}   → merges by updatedAt
+   - POST {action:"ledger", year, initial, adjustments}
    ════════════════════════════════════════ */
 function setSP(type,txt){const p=$("sp");p.className="sp sp-"+type;$("spTxt").textContent=txt;}
 
@@ -556,70 +639,108 @@ async function gasRead(){
   if(!cfg.gasUrl)return null;
   try{
     const res=await fetch(cfg.gasUrl+"?action=read",{redirect:"follow"});
-    if(!res.ok)throw new Error("HTTP "+res.status);
+    if(!res.ok) throw new Error("HTTP "+res.status);
     return await res.json();
-  }catch(e){return null;}
+  }catch(e){ return null; }
 }
 
-async function gasWrite(){
-  if(!cfg.gasUrl||!gasConnected)return;
+/* Merge remote entries into local by updatedAt (last-write-wins) */
+function mergeRemoteEntries(remote){
+  if(!Array.isArray(remote)) return 0;
+  const byDate={};
+  entries.forEach(e=>{byDate[e.date]=e;});
+  let changed=0;
+  remote.forEach(r=>{
+    if(!r||!r.date) return;
+    const norm={...emptyE(r.date),...r,punches:Array.isArray(r.punches)?r.punches:[],updatedAt:Number(r.updatedAt)||0};
+    const cur=byDate[r.date];
+    const curTs=cur?(Number(cur.updatedAt)||0):0;
+    if(!cur || norm.updatedAt > curTs){
+      byDate[r.date]=norm; changed++;
+    }
+  });
+  entries=Object.values(byDate).sort((a,b)=>a.date.localeCompare(b.date));
+  return changed;
+}
+
+async function gasWriteEntries(){
+  if(!cfg.gasUrl||!gasConnected) return;
+  if(syncInFlight){ syncPending=true; return; }
+  syncInFlight=true;
   setSP("busy","A guardar...");
   try{
+    const payload=entries.map(({photoThumb,...e})=>e);
     await fetch(cfg.gasUrl,{
       method:"POST",
       headers:{"Content-Type":"text/plain;charset=utf-8"},
-      body:JSON.stringify({action:"write",entries:entries.map(({photoThumb,...e})=>e)})
+      body:JSON.stringify({action:"write",entries:payload})
     });
     setSP("ok","Synced ✓");
-  }catch(e){setSP("ko","Erro sync");}
+  }catch(e){ setSP("ko","Erro sync"); }
+  syncInFlight=false;
+  if(syncPending){ syncPending=false; setTimeout(gasWriteEntries,200); }
+}
+
+async function gasWriteLedger(year){
+  if(!cfg.gasUrl||!gasConnected) return;
+  const y=String(year||curYear);
+  const data=ledger.years[y]||{initial:0,adjustments:[]};
+  try{
+    setSP("busy","A guardar saldo...");
+    await fetch(cfg.gasUrl,{
+      method:"POST",
+      headers:{"Content-Type":"text/plain;charset=utf-8"},
+      body:JSON.stringify({action:"ledger",year:y,initial:data.initial||0,adjustments:data.adjustments||[]})
+    });
+    setSP("ok","Synced ✓");
+  }catch(e){ setSP("ko","Erro sync"); }
 }
 
 async function gasConnect(){
   const url=($("gasUrl").value||"").trim();
-  if(!url){toast("Cola o URL do Apps Script","err");return;}
-  cfg.gasUrl=url;saveCfg();
+  if(!url){ toast("Cola o URL do Apps Script","err"); return; }
+  cfg.gasUrl=url; saveCfg();
   setSP("busy","A testar...");
   const data=await gasRead();
-  if(!data||data.error){setSP("ko","URL inválido");toast("Não consegui contactar o script. Verifica o URL e se foi publicado como 'Qualquer pessoa'.","err");return;}
-  gasConnected=true;
-  setSP("ok","Synced ✓");
-  // Merge remote entries
-  if(data.entries?.length){
-    const remDates=new Set(data.entries.map(e=>e.date));
-    const localOnly=entries.filter(e=>!remDates.has(e.date));
-    entries=[...data.entries.map(e=>({...emptyE(e.date),...e,punches:Array.isArray(e.punches)?e.punches:[]})),...localOnly].sort((a,b)=>a.date.localeCompare(b.date));
-    saveLocal();
+  if(!data||data.error){
+    setSP("ko","URL inválido");
+    toast("Não consegui contactar o script. Verifica o URL e se foi publicado como 'Qualquer pessoa'.","err");
+    return;
   }
-  // Extract spreadsheet ID from URL hint (if server returns it)
-  if(data.spreadsheetId){cfg.spreadsheetId=data.spreadsheetId;saveCfg();updateSheetLink();}
+  gasConnected=true;
+  if(data.entries?.length) mergeRemoteEntries(data.entries);
+  if(data.ledger?.years) ledger=data.ledger;
+  if(data.spreadsheetId){ cfg.spreadsheetId=data.spreadsheetId; saveCfg(); updateSheetLink(); }
+  saveLocal(); saveLedgerLocal();
+  setSP("ok","Synced ✓");
   $("gasSetup").style.display="none";
   $("gasConnected").style.display="block";
   renderAll();
+  // Push local changes up (in case local has newer than remote)
+  gasWriteEntries();
   toast(`Conectado! ${data.entries?.length||0} entradas carregadas ✅`,"ok");
 }
 
 async function manualSync(){
-  if(!gasConnected){toast("Liga o Google Sheets nas Definições","inf");showTab("settings");return;}
+  if(!gasConnected){ toast("Liga o Google Sheets nas Definições","inf"); showTab("settings"); return; }
   setSP("busy","A sincronizar...");
   const data=await gasRead();
-  if(!data){setSP("ko","Sem ligação");toast("Sem ligação ao servidor","err");return;}
-  if(data.entries?.length){
-    const remDates=new Set(data.entries.map(e=>e.date));
-    const localOnly=entries.filter(e=>!remDates.has(e.date));
-    entries=[...data.entries.map(e=>({...emptyE(e.date),...e,punches:Array.isArray(e.punches)?e.punches:[]})),...localOnly].sort((a,b)=>a.date.localeCompare(b.date));
-    saveLocal();renderAll();
-  }
-  await gasWrite();
-  toast("Sincronizado ✅","ok");
+  if(!data){ setSP("ko","Sem ligação"); toast("Sem ligação ao servidor","err"); return; }
+  const changed = data.entries?.length ? mergeRemoteEntries(data.entries) : 0;
+  if(data.ledger?.years) ledger=data.ledger;
+  saveLocal(); saveLedgerLocal();
+  await gasWriteEntries();
+  renderAll();
+  toast(`Sincronizado ✅${changed?` (${changed} alterações recebidas)`:""}`,"ok");
 }
 
 async function saveAndSync(){
-  saveLocal();renderAll();
-  await gasWrite();
+  saveLocal(); renderAll();
+  await gasWriteEntries();
 }
 
 function gasDisconnect(){
-  gasConnected=false;cfg.gasUrl="";saveCfg();
+  gasConnected=false; cfg.gasUrl=""; saveCfg();
   setSP("idle","Offline");
   $("gasSetup").style.display="block";
   $("gasConnected").style.display="none";
@@ -629,18 +750,19 @@ function gasDisconnect(){
 function updateSheetLink(){
   if(!cfg.spreadsheetId)return;
   const url=`https://docs.google.com/spreadsheets/d/${cfg.spreadsheetId}/edit`;
-  $("sheetLink").textContent=url;$("sheetLink").dataset.url=url;$("sheetLinkWrap").style.display="block";
+  $("sheetLink").textContent=url; $("sheetLink").dataset.url=url; $("sheetLinkWrap").style.display="block";
 }
 function openSheet(){const u=$("sheetLink").dataset.url;if(u)window.open(u,"_blank");}
 
-/* ════ CALC ════ */
+/* ══ Calc ══ */
 function totM(){return cfg.target+cfg.baseOT;}
 function dayTgt(){return totM()/21.75;}
 function calcDay(e){
   if(!e)return{worked:0,balance:0};
-  const l=parseFloat(e.lunch)||1,v=parseFloat(e.vacation)||0,h=parseFloat(e.extraUsed)||0;
-  let w=0;if(e.start&&e.end){const m=toM(e.end)-toM(e.start);if(m>0)w=(m/60)-l-cfg.morning;}
-  w+=v+h;return{worked:w,balance:w-dayTgt()};
+  const l=parseFloat(e.lunch)||1, v=parseFloat(e.vacation)||0, h=parseFloat(e.extraUsed)||0;
+  let w=0; if(e.start&&e.end){const m=toM(e.end)-toM(e.start);if(m>0)w=(m/60)-l-cfg.morning;}
+  w+=v+h;
+  return{worked:w,balance:w-dayTgt()};
 }
 function calcMS(mk){
   const list=mk==="all"?entries:entries.filter(e=>mkM(e.date)===mk);
@@ -653,27 +775,52 @@ function calcGlobal(){
   return b;
 }
 
-/* ════ PUNCH ════ */
+/* Yearly balance: initial + work-year-balance + sum(adjustments) */
+function calcYearBalance(year){
+  const y=String(year);
+  const L=ledger.years[y]||{initial:0,adjustments:[]};
+  const list=entries.filter(e=>mkY(e.date)===y);
+  // Work balance of the year = sum of (monthly balance vs contract+HS)
+  const bM={}; for(const e of list){ const m=mkM(e.date); bM[m]=(bM[m]||0)+calcDay(e).worked; }
+  let workBal=0;
+  for(const m of Object.keys(bM)){
+    const w=bM[m];
+    workBal += (Math.min(w,cfg.target)-cfg.target) + (Math.max(0,w-cfg.target)-cfg.baseOT);
+  }
+  const adjSum=(L.adjustments||[]).reduce((s,a)=>s+(Number(a.hours)||0),0);
+  const total=(L.initial||0)+workBal+adjSum;
+  return {initial:L.initial||0, workBal, adjSum, total, adjustments:L.adjustments||[]};
+}
+
+/* ══ PUNCH ══ */
 function doPunch(type){
-  const d=nowK();if(isHol(d)&&cfg.lockHolidays){toast("Feriado bloqueado","err");return;}
-  const t=qR(nowT());const e=ensE(d);if(!Array.isArray(e.punches))e.punches=[];
+  const d=nowK();
+  if(isHol(d)&&cfg.lockHolidays){toast("Feriado bloqueado","err");return;}
+  const t=qR(nowT());
+  const e=ensE(d);
+  if(!Array.isArray(e.punches)) e.punches=[];
   e.punches.push({type,time:t,ts:Date.now()});
   const ins=e.punches.filter(p=>p.type==="in"||p.type==="resume");
   const outs=e.punches.filter(p=>p.type==="out");
-  if(ins.length)e.start=ins[0].time;if(outs.length)e.end=outs[outs.length-1].time;
+  if(ins.length)e.start=ins[0].time;
+  if(outs.length)e.end=outs[outs.length-1].time;
+  touchEntry(e);
   saveAndSync();
   const L={in:"Entrée",out:"Sortie",pause:"Pause",resume:"Retour"};
   toast(`${L[type]} — ${t} · ${t2ct(t)} ct`,"ok");
 }
 function delPunch(d,i){
-  const e=getE(d);if(!e?.punches)return;e.punches.splice(i,1);
+  const e=getE(d);if(!e?.punches)return;
+  e.punches.splice(i,1);
   const ins=e.punches.filter(p=>p.type==="in"||p.type==="resume");
   const outs=e.punches.filter(p=>p.type==="out");
-  e.start=ins.length?ins[0].time:"";e.end=outs.length?outs[outs.length-1].time:"";
+  e.start=ins.length?ins[0].time:"";
+  e.end=outs.length?outs[outs.length-1].time:"";
+  touchEntry(e);
   saveAndSync();
 }
 
-/* ════ RENDER TODAY ════ */
+/* ══ Today render ══ */
 function renderToday(){
   const d=nowK(),e=getE(d),ps=e?.punches||[],last=ps[ps.length-1];
   const dot='<svg viewBox="0 0 24 24" width="12" height="12"><circle cx="12" cy="12" r="4" fill="currentColor"/></svg>';
@@ -683,7 +830,8 @@ function renderToday(){
   $("kS").textContent=e?.start?t2ct(e.start):"—";
   $("kE").textContent=e?.end?t2ct(e.end):"—";
   const{worked,balance}=calcDay(e);
-  const bel=$("kB");if(e?.start){bel.textContent=ctS(balance);bel.className="kval "+(balance>=0?"pos":"neg");}else{bel.textContent="—";bel.className="kval";}
+  const bel=$("kB");
+  if(e?.start){bel.textContent=ctS(balance);bel.className="kval "+(balance>=0?"pos":"neg");}else{bel.textContent="—";bel.className="kval";}
   updateTimer(e);
   const now=new Date(),cmk=`${now.getFullYear()}-${pad(now.getMonth()+1)}`;
   let mW=0;for(const x of entries.filter(x=>mkM(x.date)===cmk))mW+=calcDay(x).worked;
@@ -721,13 +869,13 @@ function renderWeek(){
   }).join("");
 }
 
-/* ════ PHOTO + OCR ════ */
+/* ══ Photo + OCR ══ */
 function handlePhoto(f){
   if(!f)return;const r=new FileReader();
   r.onload=ev=>{
     curPhoto=ev.target.result;const img=$("phPrev");img.src=curPhoto;img.style.display="block";
     $("bOcr").style.display="inline-flex";$("bClrPh").style.display="inline-flex";
-    const i=new Image();i.onload=()=>{const c=document.createElement("canvas");const s=Math.min(1,200/i.width);c.width=i.width*s;c.height=i.height*s;c.getContext("2d").drawImage(i,0,0,c.width,c.height);const e=ensE(nowK());e.photoThumb=c.toDataURL("image/jpeg",.6);saveLocal();};i.src=curPhoto;
+    const i=new Image();i.onload=()=>{const c=document.createElement("canvas");const s=Math.min(1,200/i.width);c.width=i.width*s;c.height=i.height*s;c.getContext("2d").drawImage(i,0,0,c.width,c.height);const e=ensE(nowK());e.photoThumb=c.toDataURL("image/jpeg",.6);touchEntry(e);saveLocal();};i.src=curPhoto;
   };r.readAsDataURL(f);
 }
 function clearPhoto(){curPhoto=null;$("phPrev").style.display="none";$("ocrbox").style.display="none";$("bOcr").style.display="none";$("bClrPh").style.display="none";}
@@ -749,7 +897,7 @@ async function runOCR(){
     await worker.terminate();
     const re=/\b(\d{1,2})[h:\.](\d{2})\b/g,found=[];let m;
     while((m=re.exec(text))!==null){const h=parseInt(m[1]),mn=parseInt(m[2]);if(h<=23&&mn<=59){const t=`${pad(h)}:${pad(mn)}`;if(!found.includes(t))found.push(t);}}
-    if(found.length){$("ocrMsg").textContent=`${found.length} hora(s) — toca para aplicar:`;$("ocrChips").innerHTML=found.map((t,i)=>`<button class="occhip" onclick="applyOcr('${t}',${i},${found.length})">${t} · ${t2ct(t)}ct</button>`).join("");}
+    if(found.length){$("ocrMsg").textContent=`${found.length} hora(s) — toca para aplicar (arredondada a 15 min):`;$("ocrChips").innerHTML=found.map((t,i)=>`<button class="occhip" onclick="applyOcr('${t}',${i},${found.length})">${t} → ${qR(t)} · ${t2ct(qR(t))}ct</button>`).join("");}
     else $("ocrMsg").textContent="Nenhuma hora detectada.";
   }catch(err){$("ocrMsg").textContent="Erro: "+err.message;}
   $("ocrIco").className="";$("ocrIco").textContent="🔍";
@@ -758,10 +906,11 @@ function applyOcr(t,i,tot){
   const qt=qR(t),e=ensE(nowK());
   if(i===0&&tot>1){e.start=qt;toast(`Início → ${qt} (${t2ct(qt)} ct)`,"ok");}
   else{e.end=qt;toast(`Fim → ${qt} (${t2ct(qt)} ct)`,"ok");}
+  touchEntry(e);
   saveAndSync();renderToday();
 }
 
-/* ════ CHART ════ */
+/* ══ Chart ══ */
 function renderChart(){
   const svg=$("csvg"),leg=$("cleg");
   const W=520,H=180,P={t:14,r:14,b:28,l:42},cW=W-P.l-P.r,cH=H-P.t-P.b;
@@ -784,7 +933,7 @@ function renderChart(){
   svg.innerHTML=ln;
 }
 
-/* ════ MANUAL ENTRY ════ */
+/* ══ Manual entry modal ══ */
 function openEntry(d){
   meDate=d||null;$("mTitle").textContent=d?`Editar — ${fmtD(d)}`:"Nova entrada";
   const e=d?getE(d):null;
@@ -796,13 +945,15 @@ function openEntry(d){
 }
 function closeEntry(){$("eOverlay").classList.remove("open");meDate=null;}
 function updateMePrev(){
-  const fake={start:$("me-st").value,end:$("me-en").value,lunch:$("me-l").value,vacation:$("me-v").value,extraUsed:$("me-h").value};
+  // Preview uses quarter-rounded values
+  const st=qR($("me-st").value), en=qR($("me-en").value);
+  const fake={start:st,end:en,lunch:$("me-l").value,vacation:$("me-v").value,extraUsed:$("me-h").value};
   const{worked,balance}=calcDay(fake);
   if(fake.start&&fake.end){$("meW").textContent=ct(worked)+" ct";$("meB").textContent=ctS(balance)+" ct";$("meB").className=balance>=0?"pos":"neg";}
   else{$("meW").textContent="—";$("meB").textContent="—";}
 }
 
-/* ════ RENDER HISTORY ════ */
+/* ══ History render ══ */
 function renderHistory(){
   renderChart();
   const months=[...new Set(entries.map(e=>mkM(e.date)))].sort().reverse();
@@ -824,6 +975,9 @@ function renderHistory(){
     <div class="sln"><span class="l" style="font-weight:700">Saldo total</span><span class="v ${totB>=0?"pos":"neg"}" style="font-size:.95rem">${ctS(totB)} ct</span></div>
     <div class="sln"><span class="l">Férias</span><span class="v">${ct(vac)} ct</span></div>
     <div class="sln"><span class="l">Jantar</span><span class="v">${dTotal.toFixed(2)} CHF</span></div>`;
+
+  renderYearlyLedger();
+
   const gb=calcGlobal();$("balN").textContent=ctS(gb);$("balN").className="bnumbig "+(gb>=0?"pos":"neg");
   const sorted=[...filt()].sort((a,b)=>String(b.date).localeCompare(String(a.date)));
   const tk=nowK();
@@ -841,7 +995,93 @@ function renderHistory(){
   }).join("");
 }
 
-/* ════ SETTINGS ════ */
+/* ══ Yearly ledger UI ══ */
+function renderYearlyLedger(){
+  // Years available: from entries + current
+  const years=[...new Set(entries.map(e=>mkY(e.date)).concat([String(curYear)]))].filter(Boolean).sort();
+  $("ylgYrSel").innerHTML=years.map(y=>`<option value="${y}" ${String(curYear)===y?"selected":""}>${y}</option>`).join("");
+  $("ylgYear").textContent=curYear;
+
+  const y=String(curYear);
+  if(!ledger.years[y]) ledger.years[y]={initial:0,adjustments:[]};
+  const L=ledger.years[y];
+  $("ylgInit").value=L.initial||0;
+
+  const calc=calcYearBalance(y);
+  $("ylgWork").textContent=ctS(calc.workBal)+" h";
+  $("ylgWork").className="v "+(calc.workBal>=0?"pos":"neg");
+  $("ylgAdjSum").textContent=ctS(calc.adjSum)+" h";
+  $("ylgAdjSum").className="v "+(calc.adjSum>=0?"pos":"neg");
+  $("ylgTotal").textContent=ctS(calc.total)+" h";
+  $("ylgTotal").style.color=calc.total>=0?"var(--g)":"var(--r)";
+
+  // Adjustments list
+  const lst=$("ylgAdjList");
+  if(!calc.adjustments.length){
+    lst.innerHTML='<div class="muted" style="padding:6px 0">Nenhum ajuste</div>';
+  } else {
+    lst.innerHTML=calc.adjustments.map((a,i)=>`
+      <div class="ylg-row">
+        <span class="adj-note">${a.note||"(sem motivo)"}</span>
+        <span class="adj-date">${a.date||"—"}</span>
+        <span class="adj-h ${a.hours>=0?'pos':'neg'}">${ctS(a.hours)}h</span>
+        <button class="ylg-del" onclick="delAdj(${i})">✕</button>
+      </div>
+    `).join("");
+  }
+}
+
+function delAdj(i){
+  const y=String(curYear); const L=ledger.years[y];
+  if(!L||!L.adjustments) return;
+  if(!confirm("Eliminar este ajuste?")) return;
+  L.adjustments.splice(i,1);
+  saveLedgerLocal();
+  gasWriteLedger(y);
+  renderYearlyLedger();
+}
+
+function openAdjModal(){
+  $("adj-d").value=nowK();
+  $("adj-h").value=0;
+  $("adj-n").value="";
+  $("adjOverlay").classList.add("open");
+}
+function closeAdjModal(){$("adjOverlay").classList.remove("open");}
+
+function saveAdj(){
+  const d=$("adj-d").value;
+  const h=parseFloat($("adj-h").value)||0;
+  const n=$("adj-n").value.trim();
+  if(!d){toast("Selecciona uma data","err");return;}
+  if(!h){toast("Valor tem de ser diferente de 0","err");return;}
+  const y=mkY(d);
+  curYear=Number(y);
+  if(!ledger.years[y]) ledger.years[y]={initial:0,adjustments:[]};
+  ledger.years[y].adjustments.push({hours:h,note:n,date:d});
+  saveLedgerLocal();
+  gasWriteLedger(y);
+  closeAdjModal();
+  renderYearlyLedger();
+  toast("Ajuste adicionado ✅","ok");
+}
+
+function saveInitial(){
+  const y=String(curYear);
+  if(!ledger.years[y]) ledger.years[y]={initial:0,adjustments:[]};
+  ledger.years[y].initial=parseFloat($("ylgInit").value)||0;
+  saveLedgerLocal();
+  renderYearlyLedger();
+}
+
+function saveLedgerToSheet(){
+  const y=String(curYear);
+  saveInitial();
+  gasWriteLedger(y);
+  toast("Saldo anual guardado ↗","ok");
+}
+
+/* ══ Settings ══ */
 function applySettings(){
   $("cfgName").value=cfg.name||"";$("cfgTgt").value=cfg.target;$("cfgOT").value=cfg.baseOT;
   $("cfgMorn").value=cfg.morning;$("cfgDin").value=cfg.dinner;$("cfgReg").value=cfg.region;
@@ -859,64 +1099,20 @@ function syncCfg(){
   Object.keys(_hc).forEach(k=>delete _hc[k]);updateTots();saveCfg();
 }
 
-/* ════ TOAST + CLOCK ════ */
+/* ══ Toast + clock ══ */
 function toast(msg,type="inf"){const c=$("tc"),el=document.createElement("div");el.className=`toast ${type}`;el.textContent=msg;c.appendChild(el);setTimeout(()=>el.remove(),2600);}
 function startClock(){const t=()=>{$("clk").textContent=new Date().toLocaleTimeString("fr-CH");updateTimer(getE(nowK()));};t();setInterval(t,1e3);}
 
-/* ════ EXPORT ════ */
+/* ══ Export / Import ══ */
 function esc(v){const s=String(v??"");return /[",\n;]/.test(s)?`"${s.replace(/"/g,'""')}"`:s;}
 function dl(blob,name){const u=URL.createObjectURL(blob),a=document.createElement("a");a.href=u;a.download=name;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(u);}
 function expCsv(){const rows=[["Date","Debut_ct","Fim_ct","Trabalhado_ct","Balance_ct","Pause_h","Vac_h","HS_h","Jantar","Local","Nota"],...[...entries].sort((a,b)=>a.date.localeCompare(b.date)).map(e=>{const{worked,balance}=calcDay(e);return[e.date,e.start?t2ct(e.start):"",e.end?t2ct(e.end):"",ct(worked),ctS(balance),e.lunch||"1",e.vacation||"0",e.extraUsed||"0",e.dinner?"1":"0",e.site||"",e.note||""];})];dl(new Blob([rows.map(r=>r.map(esc).join(";")).join("\n")],{type:"text/csv;charset=utf-8"}),`timbreuse_${nowK()}.csv`);}
-function expJson(){dl(new Blob([JSON.stringify({entries:entries.map(({photoThumb,...e})=>e),cfg},null,2)],{type:"application/json"}),`timbreuse_${nowK()}.json`);}
+function expJson(){dl(new Blob([JSON.stringify({entries:entries.map(({photoThumb,...e})=>e),cfg,ledger},null,2)],{type:"application/json"}),`timbreuse_${nowK()}.json`);}
 function parseCsvL(l,sep=";"){const o=[];let c="",q=false;for(let i=0;i<l.length;i++){const ch=l[i];if(ch==='"'){if(q&&l[i+1]==='"'){c+='"';i++;}else q=!q;}else if(ch===sep&&!q){o.push(c);c="";}else c+=ch;}o.push(c);return o.map(s=>s.trim());}
-function impCsv(text){
-  const lines=text.replace(/\r\n/g,"\n").replace(/\r/g,"\n").split("\n").filter(l=>l.trim());
-  if(lines.length<2){toast("CSV vazio","err");return;}
-  const h=parseCsvL(lines[0]).map(x=>x.toLowerCase());
-  const idx=(...ns)=>{for(const n of ns){const i=h.indexOf(n.toLowerCase());if(i!==-1)return i;}return -1;};
-  const iD=idx("date");
-  if(iD===-1){toast("Coluna Date nao encontrada","err");return;}
-  const iS =idx("debut","debut_ct","start");
-  const iE =idx("fin","fim","fim_ct","end");
-  const iL =idx("pause_midi_h","pause_h","lunch");
-  const iV =idx("vacances_h","vac_h","vacation");
-  const iDn=idx("diner","jantar","dinner");
-  const iHs=idx("hs_moins_h","hs_h","hs_utilisees_h","extraused");
-  const iSt=idx("site","local","chantier");
-  const iN =idx("note","nota","remarque");
-  const byDate={};
-  for(let i=1;i<lines.length;i++){
-    const c=parseCsvL(lines[i]);
-    const d=c[iD]||"";
-    if(!/^\d{4}-\d{2}-\d{2}$/.test(d))continue;
-    const start =iS!==-1?c[iS]||"":"";
-    const end   =iE!==-1?c[iE]||"":"";
-    const lunch =parseFloat(iL!==-1?c[iL]:"1")||1;
-    const vac   =parseFloat(iV!==-1?c[iV]:"0")||0;
-    const hs    =parseFloat(iHs!==-1?c[iHs]:"0")||0;
-    const dinner=iDn!==-1?(c[iDn].trim()==="1"||c[iDn].trim()==="true"):false;
-    const site  =iSt!==-1?c[iSt]||"":"";
-    const note  =iN!==-1?c[iN]||"":"";
-    if(!byDate[d]){byDate[d]={date:d,start,end,lunch:String(lunch),vacation:"0",extraUsed:"0",dinner,site,note,punches:[]};}
-    const ex=byDate[d];
-    if(start&&(!ex.start||toM(start)<toM(ex.start)))ex.start=start;
-    if(end&&(!ex.end||toM(end)>toM(ex.end)))ex.end=end;
-    ex.vacation=String((parseFloat(ex.vacation)||0)+vac);
-    ex.extraUsed=String((parseFloat(ex.extraUsed)||0)+hs);
-    if(dinner)ex.dinner=true;
-    if(!ex.site&&site)ex.site=site;
-    if(!ex.note&&note)ex.note=note;
-  }
-  const imp=Object.values(byDate).map(e=>({...emptyE(e.date),...e}));
-  const map=new Map(entries.map(e=>[e.date,e]));
-  for(const e of imp)map.set(e.date,e);
-  entries=Array.from(map.values()).sort((a,b)=>a.date.localeCompare(b.date));
-  saveAndSync();
-  toast(`${imp.length} dias importados (${lines.length-1} linhas lidas)`,`ok`);
-}
-function impJson(text){try{const d=JSON.parse(text);if(d.entries&&Array.isArray(d.entries)){entries=d.entries.map(e=>({...emptyE(e.date||nowK()),...e,punches:Array.isArray(e.punches)?e.punches:[]}));if(d.cfg)Object.assign(cfg,d.cfg);saveAndSync();applySettings();toast("JSON importado ✅","ok");}else toast("JSON inválido","err");}catch(x){toast("Erro: "+x.message,"err");}}
+function impCsv(text){const lines=text.replace(/\r\n/g,"\n").replace(/\r/g,"\n").split("\n").filter(l=>l.trim());if(lines.length<2){toast("CSV vazio","err");return;}const h=parseCsvL(lines[0]).map(x=>x.toLowerCase()),idx=n=>h.indexOf(n.toLowerCase());const iD=idx("date");if(iD===-1){toast("Coluna Date não encontrada","err");return;}const iS=idx("debut"),iE=idx("fim_ct")||idx("fim"),iL=idx("pause_h"),iV=idx("vac_h"),iDn=idx("jantar"),iHs=idx("hs_h"),iSt=idx("local"),iN=idx("nota");const imp=[];for(let i=1;i<lines.length;i++){const c=parseCsvL(lines[i]);const d=c[iD]||"";if(!/^\d{4}-\d{2}-\d{2}$/.test(d))continue;imp.push({...emptyE(d),date:d,start:iS!==-1?c[iS]||"":"",end:iE!==-1?c[iE]||"":"",lunch:String(iL!==-1?parseFloat(c[iL])||1:1),vacation:String(iV!==-1?parseFloat(c[iV])||0:0),dinner:iDn!==-1?c[iDn].trim()==="1":false,extraUsed:String(iHs!==-1?parseFloat(c[iHs])||0:0),site:iSt!==-1?c[iSt]||"":"",note:iN!==-1?c[iN]||"":""});}const map=new Map(entries.map(e=>[e.date,e]));for(const e of imp)map.set(e.date,e);entries=Array.from(map.values());saveAndSync();toast(`${imp.length} dias importados ✅`,"ok");}
+function impJson(text){try{const d=JSON.parse(text);if(d.entries&&Array.isArray(d.entries)){entries=d.entries.map(e=>({...emptyE(e.date||nowK()),...e,punches:Array.isArray(e.punches)?e.punches:[],updatedAt:Number(e.updatedAt)||Date.now()}));if(d.cfg)Object.assign(cfg,d.cfg);if(d.ledger&&d.ledger.years)ledger=d.ledger;saveLedgerLocal();saveAndSync();applySettings();toast("JSON importado ✅","ok");}else toast("JSON inválido","err");}catch(x){toast("Erro: "+x.message,"err");}}
 
-/* ════ TABS ════ */
+/* ══ Tabs ══ */
 function showTab(n){
   document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
   document.querySelectorAll(".nb").forEach(b=>b.classList.remove("active"));
@@ -926,7 +1122,7 @@ function showTab(n){
 }
 function renderAll(){if(activeTab==="today")renderToday();if(activeTab==="history")renderHistory();}
 
-/* ════ EVENTS ════ */
+/* ══ Events ══ */
 $("bIn").onclick=()=>doPunch("in");$("bOut").onclick=()=>doPunch("out");
 $("bPause").onclick=()=>doPunch("pause");$("bRes").onclick=()=>doPunch("resume");
 
@@ -934,6 +1130,7 @@ $("bSave").onclick=async()=>{
   const d=nowK(),e=ensE(d);
   e.site=$("tdSite").value.trim();e.lunch=$("tdLunch").value;e.vacation=$("tdVac").value;
   e.extraUsed=$("tdHS").value;e.note=$("tdNote").value.trim();e.dinner=$("tdDin").checked;
+  touchEntry(e);
   await saveAndSync();toast("Guardado ✅","ok");
 };
 
@@ -951,15 +1148,32 @@ $("eOverlay").onclick=e=>{if(e.target===$("eOverlay"))closeEntry();};
 $("mSave").onclick=async()=>{
   const d=$("me-d").value;if(!d){toast("Selecciona uma data","err");return;}
   if(isHol(d)&&cfg.lockHolidays){toast("Feriado bloqueado","err");return;}
-  const e=ensE(d);e.start=$("me-st").value;e.end=$("me-en").value;e.lunch=$("me-l").value;
-  e.vacation=String(parseFloat($("me-v").value)||0);e.extraUsed=String(parseFloat($("me-h").value)||0);
+  const e=ensE(d);
+  // ── FIX: quarter-round start/end from time inputs
+  e.start=qR($("me-st").value);
+  e.end=qR($("me-en").value);
+  e.lunch=$("me-l").value;
+  e.vacation=String(parseFloat($("me-v").value)||0);
+  e.extraUsed=String(parseFloat($("me-h").value)||0);
   e.site=$("me-s").value.trim();e.note=$("me-n").value.trim();e.dinner=$("me-din").checked;
+  touchEntry(e);
   await saveAndSync();closeEntry();toast("Guardado ✅","ok");
 };
 $("mDel").onclick=async()=>{
   if(!meDate||!confirm(`Eliminar ${fmtD(meDate)}?`))return;
-  entries=entries.filter(e=>e.date!==meDate);await saveAndSync();closeEntry();toast("Eliminado","inf");
+  // Keep a tombstone with updatedAt so remote knows deletion
+  entries=entries.filter(e=>e.date!==meDate);
+  await saveAndSync();closeEntry();toast("Eliminado","inf");
 };
+
+// Yearly ledger events
+$("bAdjAdd").onclick=openAdjModal;
+$("adjClose").onclick=closeAdjModal;
+$("adjOverlay").onclick=e=>{if(e.target===$("adjOverlay"))closeAdjModal();};
+$("adjSave").onclick=saveAdj;
+$("bLedgerSave").onclick=saveLedgerToSheet;
+$("ylgYrSel").addEventListener("change",()=>{curYear=Number($("ylgYrSel").value);renderYearlyLedger();});
+$("ylgInit").addEventListener("change",saveInitial);
 
 $("bGasConn").onclick=gasConnect;
 $("bGasSync").onclick=manualSync;
@@ -972,11 +1186,11 @@ $("bImpCsv").onclick=()=>{$("fCsv").value="";$("fCsv").click();};
 $("fCsv").onchange=ev=>{const f=ev.target.files?.[0];if(!f)return;const r=new FileReader();r.onload=()=>impCsv(r.result);r.readAsText(f);};
 $("bImpJson").onclick=()=>{$("fJson").value="";$("fJson").click();};
 $("fJson").onchange=ev=>{const f=ev.target.files?.[0];if(!f)return;const r=new FileReader();r.onload=()=>impJson(r.result);r.readAsText(f);};
-$("bReset").onclick=async()=>{if(!confirm("Apagar TODOS os dados?"))return;entries=[];await saveAndSync();toast("Dados apagados","inf");};
+$("bReset").onclick=async()=>{if(!confirm("Apagar TODOS os dados?"))return;entries=[];ledger={years:{}};saveLedgerLocal();await saveAndSync();toast("Dados apagados","inf");};
 
 document.querySelectorAll(".nb").forEach(b=>b.addEventListener("click",()=>showTab(b.dataset.tab)));
 
-/* ════ SERVICE WORKER ════ */
+/* ══ Service worker ══ */
 if("serviceWorker" in navigator){
   window.addEventListener("load",()=>{
     navigator.serviceWorker.register("./sw.js").then(r=>{
@@ -985,25 +1199,48 @@ if("serviceWorker" in navigator){
   });
 }
 
-/* ════ INIT ════ */
+/* ══ Auto-sync on visibility / online ══ */
+document.addEventListener("visibilitychange",()=>{
+  if(document.visibilityState==="visible" && gasConnected){
+    manualSync();
+  }
+});
+window.addEventListener("online",()=>{
+  if(gasConnected) manualSync();
+});
+
+/* ══ Periodic background sync while app is open ══ */
+setInterval(()=>{
+  if(gasConnected && document.visibilityState==="visible" && !syncInFlight){
+    // Light pull every 60s
+    gasRead().then(data=>{
+      if(!data||data.error) return;
+      let ch=0;
+      if(data.entries?.length) ch=mergeRemoteEntries(data.entries);
+      if(data.ledger?.years) ledger=data.ledger;
+      if(ch){ saveLocal(); saveLedgerLocal(); renderAll(); }
+    }).catch(()=>{});
+  }
+}, 60*1000);
+
+/* ══ Init ══ */
 (function(){
-  loadCfg();loadLocal();applySettings();
+  loadCfg();loadLocal();loadLedger();applySettings();
   $("tdate").textContent=fmtD(nowK());
   renderToday();startClock();
-  // If URL was saved, try auto-read on load
   if(cfg.gasUrl){
     gasConnected=true;
     setSP("busy","A carregar...");
     gasRead().then(data=>{
       if(!data||data.error){gasConnected=false;setSP("idle","Offline");return;}
-      if(data.entries?.length){
-        const remDates=new Set(data.entries.map(e=>e.date));
-        const localOnly=entries.filter(e=>!remDates.has(e.date));
-        entries=[...data.entries.map(e=>({...emptyE(e.date),...e,punches:Array.isArray(e.punches)?e.punches:[]})),...localOnly].sort((a,b)=>a.date.localeCompare(b.date));
-        saveLocal();renderAll();
-      }
+      if(data.entries?.length) mergeRemoteEntries(data.entries);
+      if(data.ledger?.years) ledger=data.ledger;
+      saveLocal(); saveLedgerLocal();
+      renderAll();
       setSP("ok","Synced ✓");
       $("gasSetup").style.display="none";$("gasConnected").style.display="block";
+      // Push local to catch up
+      gasWriteEntries();
     }).catch(()=>{gasConnected=false;setSP("idle","Offline");});
   }
 })();
